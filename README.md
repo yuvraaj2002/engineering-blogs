@@ -1,29 +1,49 @@
-# engineering-blogs
+<p align="center">
+  <img src="assets/banner.jpg" alt="Engineering Blogs: practical notes on building AI systems" width="100%" />
+</p>
 
-Markdown drafts for Yuvraj Singh, an AI engineer. Posts are written here, reviewed, pasted into Hashnode, then shared on LinkedIn, X, and a portfolio. Auto-publishing may be added later with [Hashnode's official GitHub Action](https://github.com/Hashnode/publish-github-action). That workflow is not in this repo yet.
+# Engineering Blogs
 
-## Layout
+Hi, I'm **Yuvraj Singh**, an AI engineer who builds LLM systems for production: agents, retrieval (RAG), document AI, and voice AI.
+
+This repo is where I write up what I learn from that work. Not theory summaries, but the things that only show up when you actually build: what broke, what I tried, what the numbers said, and which trade-offs I'd make again.
+
+## What you'll find here
+
+Each post follows the same shape:
+
+- **The problem**: why it matters in a real system
+- **The concept**: explained plainly, without buzzwords
+- **The experiment**: the setup, the attack or failure, the fix
+- **The results**: measured, not guessed
+- **The trade-offs**: what it costs in latency, complexity, or false positives
+
+## Series
+
+| Series | Status |
+| --- | --- |
+| [AI Security & Guardrails](posts/ai-security/) | In progress |
+| [RAG in Production](posts/rag/) | Coming soon |
+| [MCP & Agent Tooling](posts/mcp/) | Coming soon |
+
+### AI Security & Guardrails
+
+Prompt injection can't be fully solved, but it can be contained by design. This series walks through jailbreaks, input classifiers, spotlighting, the dual-LLM pattern, tool-level controls, data-leak prevention, MCP security, and red-teaming, each tested hands-on. See the [full list of posts](posts/ai-security/).
+
+## Read and follow
+
+Posts are published on Hashnode and shared on:
+
+- X: [@yuvraajsinghh1](https://x.com/yuvraajsinghh1)
+- LinkedIn: [Yuvraj Singh](https://www.linkedin.com/in/yuvraaj-singh/)
+- Portfolio: [Portfolio site](https://master.d24o598po2jt0p.amplifyapp.com/)
+
+Found a mistake or have a better approach? Open an issue. I'd genuinely like to hear it.
+
+## Repo layout
 
 ```
-posts/<topic>/NN-short-slug.md    post drafts
-posts/<topic>/images/             images for that topic
-posts/<topic>/README.md           series notes
-templates/post-template.md        frontmatter and section skeleton
+posts/<topic>/NN-short-slug.md   posts
+posts/<topic>/images/            images for each series
+templates/post-template.md       post template
 ```
-
-Topics so far: `ai-security`, `rag`, `mcp`.
-
-## Naming
-
-Name each post `posts/<topic>/NN-short-slug.md`. Put its images in `posts/<topic>/images/`.
-
-Example: `posts/ai-security/01-contain-prompt-injection.md` and `posts/ai-security/images/cover.png`.
-
-## Workflow
-
-1. Draft the post in Markdown from `templates/post-template.md`.
-2. Review it.
-3. Paste it into Hashnode.
-4. Share it on LinkedIn, X, and the portfolio.
-
-`README.md` files are never published by the Hashnode action. There are no posts yet.
